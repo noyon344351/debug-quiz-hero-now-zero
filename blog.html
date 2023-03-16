@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="text-center my-3">
+        Differences Between map,filter,forEach,find in JavaScript
+      </h3>
+      <div>
+        <h4>map:</h4>
+        <p>
+          The map method creates a new array with the results of calling a
+          provided function on every element in the original array. The map
+          method doesn't change the original array. <br />
+          Example:
+        </p>
+        <pre>
+        const arr = [1, 2, 3];
+        const mappedArr = arr.map((num) => num * 2);
+        console.log(mappedArr); // Output: [2, 4, 6]
+      </pre
+        >
+      </div>
+
+      <h4>filter:</h4>
+      <p>
+        The filter method creates a new array with all elements that pass the
+        test implemented by the provided function. The filter method doesn't
+        change the original array.<br />
+        Example:
+      </p>
+      <pre>
+        const arr = [1, 2, 3, 4, 5];
+        const filteredArr = arr.filter((num) => num % 2 === 0);
+        console.log(filteredArr); // Output: [2, 4]
+        </pre
+      >
+      <h4>forEach:</h4>
+      <p>
+        The forEach method executes a provided function once for each array
+        element. The forEach method doesn't create a new array.<br />
+        Example:
+      </p>
+      <pre>
+        const arr = [1, 2, 3];
+        arr.forEach((num) => console.log(num)); // Output: 1,2,3
+        </pre
+      >
+      <h4>find:</h4>
+      <p>
+        The find method returns the value of the first element in the array that
+        satisfies the provided testing function. Otherwise, it returns
+        undefined. The find method doesn't change the original array.<br />
+        Example:
+      </p>
+      <pre>
+        const arr = [1, 2, 3, 4, 5];
+        const foundNum = arr.find((num) => num > 3);
+        console.log(foundNum); // Output: 4
+        </pre
+      >
+      <h4>Differences between LocalStorage,SessionStorage and Cookies :</h4>
+      <p>
+        LocalStorage and SessionStorage are designed to store larger amounts of
+        data and are accessible only by the same origin, while Cookies are
+        designed for smaller amounts of data and can be accessed by any website
+        that has access to them. LocalStorage is persistent and data remains
+        available even after the user closes their browser, whereas
+        SessionStorage is temporary and data is deleted when the user closes
+        their browser. Cookies can be persistent or temporary, depending on how
+        they are set up by the developer.
+      </p>
+      <h4>Event Loop:</h4>
+      <p>
+        The event loop is a mechanism in JavaScript that allows the language to
+        handle multiple tasks asynchronously by using a queue to manage events.
+        It continuously checks the queue for new events and processes them by
+        calling any associated functions or callbacks. This allows JavaScript to
+        run complex applications while remaining responsive and efficient,
+        without blocking the execution of other tasks.
+      </p>
+      <h4>quizTimer function:</h4>
+      <p>
+        The quizTimer function takes one argument dismiss. The function is using
+        an interval timer to update the timer count. <br />
+        Here's a brief overview of what the function is doing:
+      </p>
+      <ul>
+        <li>
+          If dismiss is true, the function clears the timer using
+          clearInterval() and returns.
+        </li>
+        <li>
+          Otherwise, the function uses setInterval() to execute a callback
+          function every 1000 milliseconds (1 second).
+        </li>
+        <li>
+          The callback function gets the HTML element with the ID "count" and
+          updates its innerHTML to display the current count in minutes and
+          seconds format. It also updates the count variable by incrementing it
+          by 1 on each interval.
+        </li>
+        <li>
+          If the count is greater than 60, the function alternates the text
+          color of the timer between red-300 and red-700 every 2 seconds.
+        </li>
+      </ul>
+
+      <h4>chooseQuiz function:</h4>
+      <p>
+        The function takes two arguments index and givenAns. The function
+        updates an array called answers based on the quiz question at the given
+        index and the answer given by the user.<br />
+        Here's a brief overview of what the function is doing:
+      </p>
+      <ul>
+        <li>
+          The function first checks whether an object with the same id property
+          as the quiz question at the given index already exists in the answers
+          array using the find() method.
+        </li>
+        <li>
+          If an object with the same id property exists in the answers array,
+          the function finds the index of that object using a for loop and the
+          splice() method to update the givenAns property of the object with the
+          new answer provided by the user.
+        </li>
+        <li>
+          If no object with the same id property exists in the answers array,
+          the function pushes a new object with the quiz question at the given
+          index and the new answer provided by the user to the answers array.
+        </li>
+        <li>
+          Finally, the function calls the displayAnswers() function to update
+          the user interface with the updated answers array.
+        </li>
+      </ul>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
